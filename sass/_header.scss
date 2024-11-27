@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    height: min-content;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    background-color: $color-white;
+    z-index: 100;
+    
+    @include respond(tab-port) {
+        display: block;
+    }
+
+   &__logo-box{
+    svg{
+        position: absolute;
+        top: 0;
+    }
+ 
+    @include respond(tab-port) {
+        float: left;
+    }
+
+    &:hover{
+        transform: scale(1.05);
+    }
+   }
+}
+
+.sticky-top {
+    @supports (position: sticky) {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: $color-white;
+    }
+ }

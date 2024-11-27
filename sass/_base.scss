@@ -1,0 +1,170 @@
+// COLOR VARIABLES
+
+$color-primary: #FA2742;
+$color-primary-light:#fa4127;
+
+$color-primary-dark: #E00623;
+
+$color-secondary: #202020;
+$color-secondary-light-1: #3F3F3F;
+$color-secondary-light-2: #707070;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+$color-font: #37343A;
+
+$color-white: #FFFFFF;
+
+//SHADOWS
+$img-shadow: 0 5px 20px 0 rgba(0, 0, 0 , 0.1), 0 6px 30px 0 rgba(0, 0, 0 , 0.1);
+
+// FONT VARIABLES
+//$font-logo: 'Pacifico', cursive;
+$font-primary: "Work Sans", sans-serif;
+$font-display: "Work Sans", sans-serif;
+
+//FONT SIZE VARIABLES
+$fs-xlarge: 3.5em;
+
+// font-sizes for heading 2
+$fs-large: 3em; 
+$fs-large-tablet: 2.5em; 
+$fs-large-phone: 2em; 
+
+// font-sizes for heading 3
+$fs-600: 2.25em; 
+$fs-600-tablet: 2em; 
+$fs-600-phone: 1.625em; 
+
+// font-sizes 
+$fs-500: 1.75em; // 28px
+$fs-500-tablet: 1.5em; // 24px
+$fs-500-phone: 1.375em; //22px
+
+// font-sizes for body
+$fs-400: 1em; // 16px
+// $fs-400-tablet: 
+// $fs-400-phone:
+
+// font-sizes small
+$fs-300: .8em; // 12.8px
+// $fs-300-tablet:
+// $fs-300-phone:
+
+
+//RESPONSIVE BREAKPOINTS
+$bp_largest: 75em; // 1200px
+$bp_large: 62.5em; // 1000px
+$bp_medium: 50em; // 800px
+$bp_small: 37.5em; // 600px
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: $color-white;
+    background: $color-primary-dark;
+  }
+  
+  ::selection {
+    color: $color-white;
+    background: $color-primary-dark;
+  }
+
+html {
+    box-sizing:  border-box;
+    font-size: $fs-400; 
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-font;
+    font-weight: 300;
+    line-height: 1.37em;
+    // background-color: #9fa8a3;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.5%;
+    width: 100%; 
+    @include respond(tab-port) {
+        padding: 0 .8rem;
+    }
+}
+
+.section-home, .section-contact{
+    background-color: #e3e0cf;
+}
+.section-home{
+    height: 85vh;
+    min-height: 600px;
+    -webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    display: flex;
+}
+
+@include respond(tab-port) {
+    .section-home{
+        height: auto;
+        width: 100%;
+        -webkit-clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
+        clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    }
+}
+
+.section-projects{
+    background-color: #c5d5cd;
+    -webkit-clip-path:polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+    clip-path:polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+    padding-top: 9rem;
+}
+
+//............ SHARED ELEMENTS...................
+
+//BUTTONS
+.btn {
+    border: none;
+    cursor: pointer;
+    &,
+    &:link,
+    &:visited {
+        // text-transform: uppercase;
+        text-decoration: none;
+        padding:  1rem 2rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: $fs-400;
+        width: max-content;
+        background-color: $color-primary-dark;
+        color: $color-white;
+    }
+}
+.btn--action {
+}
+
+// THE REST ELEMENTS
+.p--underline{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -.7rem;
+        width: 100%;
+        background-color: $color-grey-light-2;
+        height: 1px;
+    }
+}

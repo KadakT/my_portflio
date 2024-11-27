@@ -1,0 +1,42 @@
+.heading-primary--main{
+      //font-family: $font-logo;  
+      font-weight: 300;
+      span{
+        font-weight: 600;
+      }
+}
+
+.heading-primary{
+    font-size: $fs-large;
+    line-height: 1.25em;
+}
+.heading-primary--sub{
+    font-size: 1.75rem;
+    line-height: .8em;
+    font-weight: 500;
+}
+
+.heading-primary--sub,
+.heading-2,
+.heading-3{
+    font-family: $font-display;  
+}
+
+.heading-2 {
+    font-weight: 400;  
+    font-size: $fs-large;
+    line-height: 1.25em;
+    text-align: center;
+    color: $color-grey-dark-2;
+}
+
+.heading-3{
+    font-weight: 400;
+    font-size: $fs-600;
+    line-height: 1.25me;
+
+}
+
+.heading--color-primary{
+    color: $color-primary;
+}

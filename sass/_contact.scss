@@ -1,0 +1,65 @@
+.contact {
+
+    // .contact__text
+
+    &__text {
+        text-align: center;
+    }
+
+    // .contact__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    // .contact__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+     // .contact__icon
+    &__icon {
+        fill: $color-primary;
+        width: 3rem;
+    }
+
+    // .contact__name
+
+    &__name {
+        font-size: $fs-500;
+        margin-bottom: 1rem;
+    }
+
+    // .contact__skype
+
+    &__skype {
+    }
+
+    // .contact__email
+
+    &__email {
+        color: $color-font;
+    }
+
+    // .contact__phone
+
+    &__phone {
+    }
+
+    .external-link{
+        width: 1rem;
+        height: 1rem;
+        margin-right: 4px;
+    }
+
+    .linkedin-link{
+        display: flex;
+        align-items: center;
+    }
+}
+
