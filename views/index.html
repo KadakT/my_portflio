@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/jquery.min.js"></script>
+        <title>Tk Web</title>
+        <link rel="icon" href="../img/svg/logo.svg" type="image/x-icon"> 
+    </head>
+    <body>
+        <header class="sticky-top">
+            <div class="header container">
+                <div class="header__logo-box">
+                    <img class="header__logo-svg" alt="Tk logo" src="/img/svg/logo.svg">
+                </div>
+                <div class="navigation">
+                   
+                    <button class="navigation__btn" aria-controls="menu" aria-haspopup="true">
+                        <span class="navigation__icon">&nbsp;</span>
+                    </button>
+                     <!-- <div class="navigation__background">&nbsp;</div> -->
+                     <nav class="navigation__nav"  role="menu" id="menu" >
+                         <ul class="navigation__list">
+                             <li class="navigation__item"><a href="#section-home" class="navigation__link" role="menuitem">Home</a></li>
+                             <li class="navigation__item"><a href="#section-about" class="navigation__link" role="menuitem">About</a></li>
+                             <li class="navigation__item"><a href="#section-services" class="navigation__link" role="menuitem">Services</a></li>
+                             <li class="navigation__item"><a href="#section-projects" class="navigation__link" role="menuitem">Projects</a></li>
+                             <li class="navigation__item"><a href="#section-resume" class="navigation__link" role="menuitem">Resume</a></li>
+                             <li class="navigation__item"><a href="#section-contact" class="navigation__link" role="menuitem">Contact</a></li>
+                         </ul>
+                     </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="section-home u-margin-bottom-medium" id="section-home">
+                <div class="home container">
+                    <div class="home__content">
+                        <h1 class="heading-primary">
+                            <span class="heading-primary--main">Hello, I'm <span class="heading--color-primary">Tatjana</span> </span>
+                            <span class="heading-primary--sub heading--color-primary">Web Developer</span>
+                        </h1>
+                        <P>Crafting accessible, user-focused digital experiences with clean and efficient code.</P>
+                        <a href="#section-projects" class="btn btn--action">
+                               My projects
+                        </a>
+                    </div>
+                    <div class="home__picture">
+                            <img src="img/tatjana.png" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img">
+                    </div>
+                </div>
+            </section>
+            <section class="section-about u-margin-bottom-small" id="section-about">
+                <div class="container">
+                    <div class="heading__container">
+                        <h2 class="heading-2 u-margin-bottom-small">About Me</h2>
+                    </div>
+                    <div class="about u-margin-bottom-medium">
+                        <div class="about__picture">
+                            <img src="/img/TatjanaK.jpg" alt="Portrait picture of Tatjana Kadak" class="about__img">
+                        </div>
+                        <div class="about__details">
+                            <div class="about__text">
+                                <p class="heading-3 u-margin-bottom-small heading--color-primary">Hi there...</p>
+                                <p>Experienced Web Developer specializing in accessibility and usability. I design and optimize front-end solutions that meet high standards for functionality and user experience. Passionate about building sustainable, user-first digital systems that align with business goals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <h3 class="heading-3 u-margin-bottom-small">I'm expert on</h3>
+                        <div class="skills__text u-margin-bottom-small">
+                            <span>Let's Work Together</span>
+                            <p>In addition to my Bachelor's Degree in the field of web development. I have finished a view successful project with the use of different technologies like Angular, Liferay, and so on. In addition to the development, I have built prototypes considering best practices and UX/Ui.</p>
+                        </div>
+                        <ul class="skills-bar">
+                            <li  class="skills-bar__item">
+                              <div class="skills-bar__title">
+                                <h4>HTML5</h4>
+                                <span class="skills-bar__percent" id="html-percent" aria-label="90 percent"></span>
+                              </div>
+                              <div class="skills-bar__container">
+                                <span class="skills-bar__progressbar " id="progress-html" ></span>
+                              </div>
+                            </li>
+                            <li  class="skills-bar__item">
+                              <div class="skills-bar__title">
+                                <h4>CSS / SASS</h4>
+                                <span class="skills-bar__percent" id="css-percent" aria-label="90 percent"></span>
+                              </div>
+                              <div class="skills-bar__container">
+                                <span class="skills-bar__progressbar " id="progress-css" ></span>
+                              </div>
+                            </li>
+                            
+                            <li  class="skills-bar__item">
+                              <div class="skills-bar__title">
+                                <h4>TypeScript</h4>
+                                <span class="skills-bar__percent" id="typescript-percent" aria-label="70 percent"></span>
+                              </div>
+                              <div class="skills-bar__container">
+                                <span class="skills-bar__progressbar " id="progress-typescript" ></span>
+                              </div>
+                            </li>
+                            
+                            <li  class="skills-bar__item">
+                              <div class="skills-bar__title">
+                                <h4>Angular</h4>
+                                <span class="skills-bar__percent" id="angular-percent" aria-label="80 percent"></span>
+                              </div>
+                              <div class="skills-bar__container">
+                                <span class="skills-bar__progressbar " id="progress-angular" ></span>
+                              </div>
+                            </li>
+                            
+                            <li  class="skills-bar__item">
+                              <div class="skills-bar__title">
+                                <h4>React</h4>
+                                <span class="skills-bar__percent" id="react-percent" aria-label="30 percent"></span>
+                              </div>
+                              <div class="skills-bar__container">
+                                <span class="skills-bar__progressbar " id="progress-react" ></span>
+                              </div>
+                            </li>
+                            <li  class="skills-bar__item">
+                                <div class="skills-bar__title">
+                                  <h4>Accessiblity</h4>
+                                  <span class="skills-bar__percent" id="accessibility-percent" aria-label="90 percent"></span>
+                                </div>
+                                <div class="skills-bar__container">
+                                  <span class="skills-bar__progressbar " id="progress-accessibility" ></span>
+                                </div>
+                              </li>
+                          </ul>
+                       <!-- <div class="skills__bar u-margin-bottom-medium">
+                           <div class="skills__item">
+                                <p class="skills__name">HTML 5</p>
+                                <div class="skills__container" data-skills-bar__percent="90%">
+                                    <div class="skills__skill" style="height:28px;width:0%;">90%</div>
+                                </div>
+                           </div>
+                           <div class="skills__item">
+                                <p class="skills__name">CSS 3</p>
+                                <div class="skills__container" data-skills-bar__percent="80%">
+                                    <div class="skills__skill" style="height:28px;width:0%;">80%</div>
+                                </div>
+                            </div>
+                            <div class="skills__item">
+                                <p class="skills__name">Javascript</p>
+                                <div class="skills__container" data-skills-bar__percent="60%">
+                                    <div class="skills__skill" style="height:28px;width:0%;">60%</div>
+                                </div>
+                            </div>
+                            <div class="skills__item">
+                                <p class="skills__name">Angular</p>
+                                <div class="skills__container" data-skills-bar__percent="70%">
+                                    <div class="skills__skill" style="height:28px;width:0%;">70%</div>
+                                </div>
+                            </div>
+                            <div class="skills__item">
+                                <p class="skills__name">UX/UI</p>
+                                <div class="skills__container" data-skills-bar__percent="90%">
+                                    <div class="skills__skill" style="height:28px;width:0%;">80%</div>
+                                </div>
+                            </div>
+                       </div> -->
+                       <button class="btn skills__btn">Download my resume</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-services u-padding-bottom-medium u-padding-top-huge" id="section-services">
+                <div class="services container">
+                    <div class="heading__container">
+                        <h2 class="heading-2 u-margin-bottom-small">Services</h2>
+                    </div>
+                    <p class="services__text p--underline u-margin-bottom-medium">From accessible landing pages to enterprise-level development, I provide reliable and user-focused web solutions designed to elevate your digital presence.</p>
+                    <div class="services__list">
+                        <div class="services__item vertical-card">
+                            <img class="vertical-card__img" src="img/svg/undraw_web-browsing.svg" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img">
+                            <div class="vertical-card__text">
+                                <h3 class="heading-3 vertical-card__tittle">Accessibility consultation</h3>
+                                <p class="vertical-card__text">Need to make your website more accessible? I offer expert accessibility consultations to help your web application meet WCAG standards and become inclusive for users of all abilities. Using the Website Accessibility Conformance Evaluation Methodology (WCAG-EM), I provide a detailed accessibility review and deliver actionable recommendations on how to improve your site or app. Let’s make the web more inclusive—feel free to reach out for more details.</p>
+                            </div>
+                        </div>
+                        <div class="services__item vertical-card">
+                            <div class="vertical-card__text">
+                                <h3 class="heading-3 vertical-card__tittle">Landing page development</h3>
+                                <p class="vertical-card__text">Need a clean, fast, and effective landing page to showcase your product or service? I create custom landing pages that are not only visually appealing but also optimized for accessibility, performance, and user engagement. Whether it’s for a campaign, event, or new launch, I’ll ensure your landing page delivers results across all devices and meets modern web standards. Get in touch to bring your idea to life!</p>
+                            </div>
+                            <img class="vertical-card__img" src="img/svg/undraw_landing-page.svg" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img">
+                        </div>
+                        <div class="services__item vertical-card">
+                            <img class="vertical-card__img" src="img/svg/undraw_pair-programming.svg" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img">
+                            <div class="vertical-card__text">
+                                <h3 class="heading-3 vertical-card__tittle">Consultation & Development for Large Projects</h3>
+                                <p class="vertical-card__text">Need an experienced developer to join your large-scale Angular project? I bring senior-level expertise to support your team with component architecture, accessibility best practices, and clean, maintainable code. Whether it’s a long-term collaboration or short-term support, I’m ready to step in and help move your project forward.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-projects" id="section-projects">
+                <div class="projects container">
+                    <div class="heading__container">
+                        <h2 class="heading-2 u-margin-bottom-small">Projects</h2>
+                    </div>
+                  
+                    <p class="projects__text p--underline u-margin-bottom-medium">Phasellus accumsan scelerisque dolor, quis mattis justo bibendum non. Nulla sollicitudin turpis in enim elementum varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</p>
+                    <div class="projects__list">
+                        <div class="projects__item card">
+                            <h3 class="heading-3 card__tittle">KOVTP project</h3>
+                            <img class="card__img" src="img/kovtp.png" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img">
+                            <p class="card__text">A project aimed at improving this service portal for local governments and implementing web accessibility for web services.</p>
+                            <button class="btn card__btn">
+                                <div class="card__icon">
+                                    <svg aria-label="External link" role="img">
+                                        <title>External link</title>
+                                        <use xlink:href="img/sprite.svg#icon-external-link"></use>
+                                    </svg>
+                                </div>
+                                KOVTP project webpage
+                            </button>
+                        </div>
+                        <div class="projects__item card">
+                            <h3 class="heading-3 card__tittle">Landing Pages</h3>
+                            <img class="card__img" src="img/easconsult.png" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img">
+                            <p class="card__text">Voluptatum mollitia quae. Vero ipsum sapiente molestias accusamus rerum sed a eligendi aut quia. Vero ipsum sapiente molestias accusamus rerum sed a eligendi aut quia. Vero ipsum sapiente molestias accusamus rerum sed a eligendi aut quia.</p>
+                            <button class="btn card__btn">
+                                <div class="card__icon">
+                                    <svg aria-label="External link" role="img">    
+                                        <title>External link</title>
+                                        <use xlink:href="img/sprite.svg#icon-external-link"></use>
+                                    </svg>
+                                </div>
+                                Landing page example
+                            </button>
+                        </div>
+                        <div class="projects__item card">
+                            <h3 class="heading-3 card__tittle">Angular project</h3>
+                            <img class="card__img" src="img/angular.png" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img">
+                            <p class="card__text">Voluptatum mollitia quae. Vero ipsum sapiente molestias accusamus rerum sed a eligendi aut quia.</p>
+                            <button class="btn card__btn">
+                                <div class="card__icon">
+                                    <svg aria-label="External link" role="img">
+                                        <title>External link</title>
+                                        <use xlink:href="img/sprite.svg#icon-external-link"></use>
+                                    </svg>
+                                </div>
+                                Check my angular project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-resume" id="section-resume">
+                <div class="resume container u-padding-top-medium u-padding-bottom-medium">
+                    <div class="heading__container">
+                        <h2 class="heading-2 u-margin-bottom-small">Resume</h2>
+                    </div>
+                  <div class="timeline">
+                    <div class="timeline__container timeline__container--right timeline__title work">
+                        <h3 class="">Work experiense</h3>
+                    </div>
+                    <div class="timeline__container timeline__container--right">
+                        <div class="timeline__content">
+                            <h4 class="timeline__sub-title">Software Engineer</h4>
+                            <p class="timeline__date">March 2022 - March 2025</p>
+                            <p class="timeline__description">Led the modernization of an internet banking platform by integrating Micro Frontends, enhancing API services, and ensuring WCAG 2.1 compliance for improved accessibility. Conducted accessibility workshops across the Baltic region to promote inclusive design. Developed and maintained a centralized MFE library for consistency and scalability. Optimized web applications using Angular 16-18 while utilizing industry-standard accessibility tools.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__container timeline__container--left">
+                        <div class="timeline__content">
+                            <h4 class="timeline__sub-title">Web Developer - Andmevara AS</h4>
+                            <p class="timeline__date">April 2019 – February 2022</p>
+                            <p class="timeline__description">Worked on multiple projects focused on improving web services and accessibility. In KOVTP, led the development of an accessible web solution adopted by 90% of Estonian municipalities, optimizing workflows and reducing operational costs. In Patent Office, created a prototype with a strong focus on accessibility and user experience for a complex web service. Utilized technologies such as Angular, Liferay, and Node.js while ensuring compliance with WCAG standards.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__container timeline__container--right">
+                        <div class="timeline__content">
+                            <h4 class="timeline__sub-title">Support Engineer - CGI Eesti AS </h4>
+                            <p class="timeline__date">June 2014 - March 2019</p>
+                            <p class="timeline__description">At Npower (UK), I worked on Project Pavement, analyzing existing systems, writing improvement specifications for BizTalk ESB, and investigating operational issues to enhance business solutions. During Project NEMO, I provided Level 3 support for energy consumption forecasting software, successfully resolving complex bugs and algorithm errors. In Project ENGIE (Belgium), I integrated and supported Web Services into an Enterprise Service Bus (ESB) as part of a service-oriented architecture.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__container timeline__container--left">
+                        <div class="timeline__content">
+                            <h4 class="timeline__sub-title">Software Consultant - EDISOFT ESTONIA OU</h4>
+                            <p class="timeline__date">Jun 2014 - Mar 2019</p>
+                            <p class="timeline__description">Installed and configured EDI software, developed data transformations in XSLT, and managed database integrations. Provided client support, ERP interactions, and end-user training. Contributed to large-scale, long-term development projects.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__container timeline__container--right timeline__title education">
+                        <h3 >Education</h3>
+                    </div>
+                    <div class="timeline__container timeline__container--left">
+                        <div class="timeline__content">
+                            <h4 class="timeline__sub-title">Experimental Interaction Design Course</h4>
+                            <p class="timeline__date">January 2014</p>
+                            <p class="timeline__description">A eight-day workshop focused on mobile app design principles. Developed prototypes, conducted user testing, and built a functional mobile application using JavaScript, HTML, and CSS. <a href="http://timetrackertlu.wordpress.com/" target="_blank">Read more about the workshop (opens in a new tab)</a>.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__container timeline__container--right">
+                        <div class="timeline__content">
+                            <h4 class="timeline__sub-title">BA - Web Development</h4>
+                            <p class="timeline__date">September 2010 - June 2013</p>
+                            <p class="timeline__description">Focused on web accessibility research, WAI-ARIA testing specifications, and WCAG-based evaluation methods. Developed technical recommendations to improve accessibility, presented findings at IT events, and authored research papers on inclusive web development.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__container timeline__container--left">
+                        <div class="timeline__content">
+                            <h4 class="timeline__sub-title">Cisco Network Administration – Level 1</h4>
+                            <p class="timeline__date">September 2011 - January 2012</p>
+                            <p class="timeline__description">Completed foundational training in Cisco network administration, covering essential networking concepts, routing and switching, and network security fundamentals. Gained hands-on experience configuring and troubleshooting Cisco devices to ensure efficient and secure network operations.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+
+            <section class="section-contact" id="section-contact">
+                <div class="contact container u-padding-top-medium u-padding-bottom-medium">
+                    <div class="heading__container">
+                        <h2 class="heading-2 u-margin-bottom-small">Contact Me</h2>
+                    </div>
+                    <p class="contact__text p--underline u-margin-bottom-medium">Please feel free to contact me if you need any further information or you have some propose for me to take a part in an interesting project.</p>
+                    <div class="contact__list">
+                        <div class="contact__item ">
+                            <div class="contact__icon-container zoom-in">
+                                <svg class="contact__icon">
+                                    <use xlink:href="img/sprite.svg#icon-skype"></use>
+                                </svg>
+                            </div>
+                            <span class="contact__name" aria-hidden="true">Skype</span>
+                            <p class="contact__skype">tatjana.fomina@windowslive.com</p>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon-container zoom-in">
+                                <svg class="contact__icon" aria-hidden="true">
+                                    <use xlink:href="img/sprite.svg#icon-envelope-open"></use>
+                                </svg>
+                            </div>
+                         
+                            <span class="contact__name">Contacte me by email</span>
+                            <a class="contact__email" href=mailto:tanja.kadak@gmail.com?subject="Contacte me by email">tanja.kadak@gmail.com</a>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon-container zoom-in">
+                                <svg class="contact__icon" aria-hidden="true">
+                                    <use xlink:href="img/sprite.svg#icon-linkedin1"></use>
+                                </svg>
+                            </div>
+                          
+                            <span class="contact__name">Linkedin</span>
+                            <a href="https://www.linkedin.com/in/tatjanakadak/" class="linkedin-link"> 
+                                <svg aria-label="External link" role="img" class="external-link">
+                                    <title>External link</title>
+                                    <use xlink:href="img/sprite.svg#icon-external-link"></use>
+                                </svg>LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <p class="footer_copyright">
+                    Built by <a href="#" class="footer__link">Tatjna Kadak</a>. Copyright &copy; by Tatjana Kadak. 
+                </p>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/jquery.js"></script>
+    </body>
+</html>
