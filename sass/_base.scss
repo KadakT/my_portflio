@@ -1,11 +1,11 @@
 // COLOR VARIABLES
 
-$color-primary: #FA2742;
+$color-primary: #e91f4f;
 $color-primary-light:#fa4127;
 
-$color-primary-dark: #E00623;
+$color-primary-dark: #e91f4f;
 
-$color-secondary: #202020;
+$color-secondary: #070707;
 $color-secondary-light-1: #3F3F3F;
 $color-secondary-light-2: #707070;
 
@@ -15,12 +15,17 @@ $color-grey-light-2: #aaa;
 $color-grey-dark-1: #54483A;
 $color-grey-dark-2: #6D5D4B;
 
+$color-beige-light: #f1ede4;
+
 $color-font: #37343A;
 
 $color-white: #FFFFFF;
 
 //SHADOWS
 $img-shadow: 0 5px 20px 0 rgba(0, 0, 0 , 0.1), 0 6px 30px 0 rgba(0, 0, 0 , 0.1);
+
+//BORDER RADIUS
+$border-radius: 4px;
 
 // FONT VARIABLES
 //$font-logo: 'Pacifico', cursive;
@@ -62,12 +67,15 @@ $bp_large: 62.5em; // 1000px
 $bp_medium: 50em; // 800px
 $bp_small: 37.5em; // 600px
 
+//ANIMATIONS
+$animation-delay: .4s;
+
 *,
 *::before,
 *::after{
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing:  border-box;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -103,9 +111,21 @@ body {
     }
 }
 
-.section-home, .section-contact{
-    background-color: #e3e0cf;
+.section-home{
+    //background-color: #e3e0cf;
+    background-color: #fafafa;
 }
+
+.section-services{
+    background-color: $color-beige-light;
+    clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+}
+
+.section-contact{
+    background-color: #1b1b1b;
+    color: $color-white;
+}
+
 .section-home{
     height: 85vh;
     min-height: 600px;
@@ -125,8 +145,7 @@ body {
 
 .section-projects{
     background-color: #c5d5cd;
-    -webkit-clip-path:polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-    clip-path:polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vh), 0 100%);
     padding-top: 9rem;
 }
 
@@ -136,20 +155,21 @@ body {
 .btn {
     border: none;
     cursor: pointer;
+            // text-transform: uppercase;
+            text-decoration: none;
+            padding:  1rem 2rem;
+            display: inline-block;
+            border-radius: 10rem;
+            transition: all .2s;
+            position: relative;
+            font-size: $fs-400;
+            width: max-content;
+            background-color: $color-primary-dark;
+            color: $color-white;
     &,
     &:link,
     &:visited {
-        // text-transform: uppercase;
-        text-decoration: none;
-        padding:  1rem 2rem;
-        display: inline-block;
-        border-radius: 10rem;
-        transition: all .2s;
-        position: relative;
-        font-size: $fs-400;
-        width: max-content;
-        background-color: $color-primary-dark;
-        color: $color-white;
+
     }
 }
 .btn--action {

@@ -15,6 +15,13 @@
     line-height: .8em;
     font-weight: 500;
 }
+.heading{
+    &__container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
 
 .heading-primary--sub,
 .heading-2,
@@ -23,18 +30,30 @@
 }
 
 .heading-2 {
+    display: inline-block;
     font-weight: 400;  
     font-size: $fs-large;
     line-height: 1.25em;
     text-align: center;
     color: $color-grey-dark-2;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.heading-2::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 4rem;
+    height: 2px;
+    background-color: $color-primary;
 }
 
 .heading-3{
     font-weight: 400;
     font-size: $fs-600;
-    line-height: 1.25me;
-
+    line-height: 2.25rem;
 }
 
 .heading--color-primary{

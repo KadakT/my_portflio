@@ -1,8 +1,0 @@
-<svg width="80" height="60" xmlns="http://www.w3.org/2000/svg">
-<title>Tk Web Logo</title>
-                        <rect width="80" height="60" fill="none"/>
-                        <!-- Background layer for 'TK' -->
-                        <text x="45%" y="50%" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="#FA2742" text-anchor="middle" dominant-baseline="middle" opacity="0.4">TK</text>
-                        <!-- Foreground layer for 'web' aligned next to 'TK' -->
-                        <text x="60%" y="50%" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#333" text-anchor="middle" dominant-baseline="middle">web</text>
-</svg>
