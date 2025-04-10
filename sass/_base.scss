@@ -29,8 +29,8 @@ $border-radius: 4px;
 
 // FONT VARIABLES
 //$font-logo: 'Pacifico', cursive;
-$font-primary: "Work Sans", sans-serif;
-$font-display: "Work Sans", sans-serif;
+$font-primary: 'Inter', sans-serif;
+$font-display: 'Playfair Display', serif;
 
 //FONT SIZE VARIABLES
 $fs-xlarge: 3.5em;
@@ -97,7 +97,7 @@ body {
     font-family: $font-primary;
     color: $color-font;
     font-weight: 300;
-    line-height: 1.37em;
+    line-height: 1.5em;
     // background-color: #9fa8a3;
 }
 
