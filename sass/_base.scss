@@ -3,7 +3,7 @@
 $color-primary: #e91f4f;
 $color-primary-light:#fa4127;
 
-$color-primary-dark: #e91f4f;
+$color-primary-dark: #D11541;
 
 $color-secondary: #070707;
 $color-secondary-light-1: #3F3F3F;
@@ -37,8 +37,8 @@ $fs-xlarge: 3.5em;
 
 // font-sizes for heading 2
 $fs-large: 3em; 
-$fs-large-tablet: 2.5em; 
-$fs-large-phone: 2em; 
+$fs-large-tablet: 2em; 
+$fs-large-phone: 1.25em; 
 
 // font-sizes for heading 3
 $fs-600: 2.25em; 
@@ -119,6 +119,7 @@ body {
 .section-services{
     background-color: $color-beige-light;
     clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+   
 }
 
 .section-contact{
@@ -132,21 +133,18 @@ body {
     -webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     display: flex;
-}
-
-@include respond(tab-port) {
-    .section-home{
+    @include respond(tab-port) {
         height: auto;
         width: 100%;
-        -webkit-clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
-        clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
+        // -webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        // clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     }
 }
 
 .section-projects{
     background-color: #c5d5cd;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vh), 0 100%);
-    padding-top: 9rem;
+    padding-top: 4rem;
 }
 
 //............ SHARED ELEMENTS...................
@@ -156,20 +154,21 @@ body {
     border: none;
     cursor: pointer;
             // text-transform: uppercase;
-            text-decoration: none;
-            padding:  1rem 2rem;
-            display: inline-block;
-            border-radius: 10rem;
-            transition: all .2s;
-            position: relative;
-            font-size: $fs-400;
-            width: max-content;
-            background-color: $color-primary-dark;
-            color: $color-white;
-    &,
-    &:link,
-    &:visited {
-
+    text-decoration: none;
+    padding:  1rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: $fs-400;
+    width: max-content;
+    background-color: $color-primary-dark;
+    color: $color-white;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    &:hover,
+    &:focus {
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+        transform: translateY(-2px);
     }
 }
 .btn--action {
@@ -186,5 +185,18 @@ body {
         width: 100%;
         background-color: $color-grey-light-2;
         height: 1px;
+    }
+}
+
+.primary--underline{
+    position: relative;
+    &::after{
+    content: "";
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    width: 4rem;
+    height: 2px;
+    background-color: #e91f4f;
     }
 }

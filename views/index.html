@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tatjana Kadak – Front-End Web Developer specializing in accessibility, Angular applications, and clean, user-focused web experiences. Explore my work, projects, and services.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
@@ -19,18 +20,22 @@
                 </div>
                 <div class="navigation">
                    
-                    <button class="navigation__btn" aria-controls="menu" aria-haspopup="true">
+                    <button class="navigation__btn" 
+                            id="nav-toggle" 
+                            aria-controls="navigation" 
+                            aria-expanded="false" 
+                            aria-label="Open main navigation">
                         <span class="navigation__icon">&nbsp;</span>
                     </button>
                      <!-- <div class="navigation__background">&nbsp;</div> -->
-                     <nav class="navigation__nav"  role="menu" id="menu" >
+                     <nav class="navigation__nav" id="navigation" aria-label="Main navigation">
                          <ul class="navigation__list">
-                             <li class="navigation__item"><a href="#section-home" class="navigation__link" role="menuitem">Home</a></li>
-                             <li class="navigation__item"><a href="#section-about" class="navigation__link" role="menuitem">About</a></li>
-                             <li class="navigation__item"><a href="#section-services" class="navigation__link" role="menuitem">Services</a></li>
-                             <li class="navigation__item"><a href="#section-projects" class="navigation__link" role="menuitem">Projects</a></li>
-                             <li class="navigation__item"><a href="#section-resume" class="navigation__link" role="menuitem">Resume</a></li>
-                             <li class="navigation__item"><a href="#section-contact" class="navigation__link" role="menuitem">Contact</a></li>
+                             <li class="navigation__item"><a href="#section-home" class="navigation__link">Home</a></li>
+                             <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
+                             <li class="navigation__item"><a href="#section-services" class="navigation__link">Services</a></li>
+                             <li class="navigation__item"><a href="#section-projects" class="navigation__link">Projects</a></li>
+                             <li class="navigation__item"><a href="#section-resume" class="navigation__link">Resume</a></li>
+                             <li class="navigation__item"><a href="#section-contact" class="navigation__link">Contact</a></li>
                          </ul>
                      </nav>
                 </div>
@@ -42,15 +47,18 @@
                     <div class="home__content">
                         <h1 class="heading-primary">
                             <span class="heading-primary--main">Hello, I'm <span class="heading--color-primary">Tatjana</span> </span>
-                            <span class="heading-primary--sub heading--color-primary">Web Developer</span>
+                            <span class="heading-primary--sub primary--underline">Web Developer</span>
                         </h1>
                         <P>Crafting accessible, user-focused digital experiences with clean and efficient code.</P>
-                        <a href="#section-projects" class="btn btn--action">
+                        <a href="#section-projects" class="btn">
                                My projects
                         </a>
                     </div>
                     <div class="home__picture">
+                        <picture>
+                            <source srcset="img/tatjana_mob.png" media="(max-width: 768px)">
                             <img src="img/tatjana.png" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img no-download" oncontextmenu="return false;">
+                        </picture>
                     </div>
                 </div>
             </section>
@@ -61,7 +69,10 @@
                     </div>
                     <div class="about u-margin-bottom-medium">
                         <div class="about__picture">
-                            <img src="/img/TatjanaK.jpg" alt="Portrait picture of Tatjana Kadak" class="about__img no-download" oncontextmenu="return false;">
+                            <picture>
+                                <source srcset="img/TatjanaK_mob.jpg" media="(max-width: 768px)">
+                                <img src="/img/TatjanaK.jpg" alt="Tatjana Kadak wearing a dark pinstripe blazer, standing confidently with arms crossed in front of a gray background." class="about__img no-download" oncontextmenu="return false;" loading="lazy">
+                            </picture>
                         </div>
                         <div class="about__details">
                             <div class="about__text">
@@ -80,7 +91,9 @@
                             <li  class="skills-bar__item">
                               <div class="skills-bar__title">
                                 <h4>HTML5</h4>
-                                <span class="skills-bar__percent" id="html-percent" aria-label="90 percent"></span>
+                                <span class="skills-bar__percent" id="html-percent">
+                                    <span class="sr-only">90 percent</span>
+                                </span>
                               </div>
                               <div class="skills-bar__container">
                                 <span class="skills-bar__progressbar " id="progress-html" ></span>
@@ -89,7 +102,9 @@
                             <li  class="skills-bar__item">
                               <div class="skills-bar__title">
                                 <h4>CSS / SASS</h4>
-                                <span class="skills-bar__percent" id="css-percent" aria-label="90 percent"></span>
+                                <span class="skills-bar__percent" id="css-percent">
+                                    <span class="sr-only">90 percent</span>
+                                </span>
                               </div>
                               <div class="skills-bar__container">
                                 <span class="skills-bar__progressbar " id="progress-css" ></span>
@@ -99,7 +114,9 @@
                             <li  class="skills-bar__item">
                               <div class="skills-bar__title">
                                 <h4>TypeScript</h4>
-                                <span class="skills-bar__percent" id="typescript-percent" aria-label="70 percent"></span>
+                                <span class="skills-bar__percent" id="typescript-percent">
+                                    <span class="sr-only">70 percent</span>
+                                </span>
                               </div>
                               <div class="skills-bar__container">
                                 <span class="skills-bar__progressbar " id="progress-typescript" ></span>
@@ -109,7 +126,9 @@
                             <li  class="skills-bar__item">
                               <div class="skills-bar__title">
                                 <h4>Angular</h4>
-                                <span class="skills-bar__percent" id="angular-percent" aria-label="80 percent"></span>
+                                <span class="skills-bar__percent" id="angular-percent">
+                                    <span class="sr-only">80 percent</span>
+                                </span>
                               </div>
                               <div class="skills-bar__container">
                                 <span class="skills-bar__progressbar " id="progress-angular" ></span>
@@ -119,7 +138,9 @@
                             <li  class="skills-bar__item">
                               <div class="skills-bar__title">
                                 <h4>React</h4>
-                                <span class="skills-bar__percent" id="react-percent" aria-label="30 percent"></span>
+                                <span class="skills-bar__percent" id="react-percent">
+                                    <span class="sr-only">30 percent</span>
+                                </span>
                               </div>
                               <div class="skills-bar__container">
                                 <span class="skills-bar__progressbar " id="progress-react" ></span>
@@ -128,46 +149,16 @@
                             <li  class="skills-bar__item">
                                 <div class="skills-bar__title">
                                   <h4>Accessiblity</h4>
-                                  <span class="skills-bar__percent" id="accessibility-percent" aria-label="90 percent"></span>
+                                  <span class="skills-bar__percent" id="accessibility-percent" >
+                                    <span class="sr-only">90 percent</span>
+                                  </span>
                                 </div>
                                 <div class="skills-bar__container">
                                   <span class="skills-bar__progressbar " id="progress-accessibility" ></span>
                                 </div>
                               </li>
                           </ul>
-                       <!-- <div class="skills__bar u-margin-bottom-medium">
-                           <div class="skills__item">
-                                <p class="skills__name">HTML 5</p>
-                                <div class="skills__container" data-skills-bar__percent="90%">
-                                    <div class="skills__skill" style="height:28px;width:0%;">90%</div>
-                                </div>
-                           </div>
-                           <div class="skills__item">
-                                <p class="skills__name">CSS 3</p>
-                                <div class="skills__container" data-skills-bar__percent="80%">
-                                    <div class="skills__skill" style="height:28px;width:0%;">80%</div>
-                                </div>
-                            </div>
-                            <div class="skills__item">
-                                <p class="skills__name">Javascript</p>
-                                <div class="skills__container" data-skills-bar__percent="60%">
-                                    <div class="skills__skill" style="height:28px;width:0%;">60%</div>
-                                </div>
-                            </div>
-                            <div class="skills__item">
-                                <p class="skills__name">Angular</p>
-                                <div class="skills__container" data-skills-bar__percent="70%">
-                                    <div class="skills__skill" style="height:28px;width:0%;">70%</div>
-                                </div>
-                            </div>
-                            <div class="skills__item">
-                                <p class="skills__name">UX/UI</p>
-                                <div class="skills__container" data-skills-bar__percent="90%">
-                                    <div class="skills__skill" style="height:28px;width:0%;">80%</div>
-                                </div>
-                            </div>
-                       </div> -->
-                       <a class="btn skills__btn" href="/tatjana-kadak-resume.pdf" download >Download my resume</a>
+                       <a class="btn" href="/tatjana-kadak-resume.pdf" download >Download my resume</a>
                     </div>
                 </div>
             </section>
@@ -180,7 +171,7 @@
                     <p class="services__text p--underline u-margin-bottom-medium">From accessible landing pages to enterprise-level development, I provide reliable and user-focused web solutions designed to elevate your digital presence.</p>
                     <div class="services__list">
                         <div class="services__item vertical-card">
-                            <img class="vertical-card__img" src="img/svg/undraw_web-browsing.svg" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img no-download" oncontextmenu="return false;">
+                            <img class="vertical-card__img" src="img/svg/undraw_web-browsing.svg" alt="Illustration of a person browsing a website on a computer." class="img no-download" oncontextmenu="return false;" loading="lazy">
                             <div class="vertical-card__text">
                                 <h3 class="heading-3 vertical-card__tittle">Accessibility consultation</h3>
                                 <p class="vertical-card__text">Need to make your website more accessible? I offer expert accessibility consultations to help your web application meet WCAG standards and become inclusive for users of all abilities. Using the Website Accessibility Conformance Evaluation Methodology (WCAG-EM), I provide a detailed accessibility review and deliver actionable recommendations on how to improve your site or app. Let’s make the web more inclusive—feel free to reach out for more details.</p>
@@ -191,10 +182,10 @@
                                 <h3 class="heading-3 vertical-card__tittle">Landing page development</h3>
                                 <p class="vertical-card__text">Need a clean, fast, and effective landing page to showcase your product or service? I create custom landing pages that are not only visually appealing but also optimized for accessibility, performance, and user engagement. Whether it’s for a campaign, event, or new launch, I’ll ensure your landing page delivers results across all devices and meets modern web standards. Get in touch to bring your idea to life!</p>
                             </div>
-                            <img class="vertical-card__img" src="img/svg/undraw_landing-page.svg" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img no-download" oncontextmenu="return false;">
+                            <img class="vertical-card__img" src="img/svg/undraw_landing-page.svg" alt="Illustration of a person interacting with a landing page design." class="img no-download" oncontextmenu="return false;" loading="lazy">
                         </div>
                         <div class="services__item vertical-card">
-                            <img class="vertical-card__img" src="img/svg/undraw_pair-programming.svg" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img no-download" oncontextmenu="return false;">
+                            <img class="vertical-card__img" src="img/svg/undraw_pair-programming.svg" alt="Concept art of collaborative coding or software development teamwork." class="img no-download" oncontextmenu="return false;" loading="lazy">
                             <div class="vertical-card__text">
                                 <h3 class="heading-3 vertical-card__tittle">Consultation & Development for Large Projects</h3>
                                 <p class="vertical-card__text">Need an experienced developer to join your large-scale Angular project? I bring senior-level expertise to support your team with component architecture, accessibility best practices, and clean, maintainable code. Whether it’s a long-term collaboration or short-term support, I’m ready to step in and help move your project forward.</p>
@@ -205,45 +196,51 @@
             </section>
 
             <section class="section-projects" id="section-projects">
-                <div class="projects container">
+                <div class="projects container u-padding-bottom-medium">
                     <div class="heading__container">
                         <h2 class="heading-2 u-margin-bottom-small">Projects</h2>
                     </div>
                   
                     <p class="projects__text p--underline u-margin-bottom-medium">Here are a few sample projects I've created to showcase my skills in Angular, React, and responsive front-end development. Each project demonstrates a different aspect of my expertise—from accessibility and component architecture to clean design and performance optimization.</p>
                     <div class="projects__list">
-                        <div class="projects__item card">
-                            <h3 class="heading-3 card__tittle">Angular App</h3>
-                            <img class="card__img" src="img/angular.png" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img no-download" oncontextmenu="return false;">
-                            <p class="card__text">A feature-rich Angular application with a simple registration flow and persistent data storage. Users can save custom recipes to a database, create a daily meal plan, and generate a shopping list based on their selected meals — making it easy to organize and shop for ingredients efficiently.</p>
-                            <a href="#" class="project-link disabled" aria-disabled="true" onclick="return false;">Angular Project link coming soon
-                                <svg aria-label="External link" role="img" class="card__icon">
-                                    <title>External link</title>
-                                    <use xlink:href="img/sprite.svg#icon-external-link"></use>
-                                </svg>
-                            </a>
+                        <div class="projects__item">
+                            <div class="card__content card">
+                                <h3 class="heading-3 card__tittle">Angular App</h3>
+                                <img class="card__img" src="img/angular.jpg" alt="Screenshot of an Angular-based meal planner app showing a recipe list, recipe details with an image, and buttons to edit or add to a shopping list." class="img no-download" oncontextmenu="return false;" loading="lazy">
+                                <p class="card__text">A feature-rich Angular application with a simple registration flow and persistent data storage. Users can save custom recipes to a database, create a daily meal plan, and generate a shopping list based on their selected meals — making it easy to organize and shop for ingredients efficiently.</p>
+                                <a href="#" class="project-link disabled external-link" aria-disabled="true" onclick="return false;">Angular Project link coming soon
+                                    <svg class="card__icon external-link__icon" aria-label="External link" role="img" >
+                                        <title>External link</title>
+                                        <use xlink:href="img/sprite.svg#icon-external-link"></use>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="projects__item card">
-                            <h3 class="heading-3 card__tittle">Landing Page</h3>
-                            <img class="card__img" src="img/easconsult.png" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img no-download" oncontextmenu="return false;">
-                            <p class="card__text">A fully responsive, accessible landing page. Clean layout, semantic HTML, and performance-optimized assets.</p>
-                            <a class="btn card__btn" href="https://your-landing-page-link.com" target="_blank">View Landing Page
-                                <svg class="card__icon" aria-label="External link" role="img">    
-                                    <title>External link</title>
-                                    <use xlink:href="img/sprite.svg#icon-external-link"></use>
-                                </svg>
-                            </a>
+                        <div class="projects__item">
+                            <div class="card__content card">
+                                <h3 class="heading-3 card__tittle">Landing Page</h3>
+                                <img class="card__img" src="img/baltbau_screenshot.jpg" alt="Screenshot of a clean landing page for Baltbau GmbH, featuring sections like 'Über Uns', services, and customer values with black, white, and yellow design." class="img no-download" oncontextmenu="return false;" loading="lazy">
+                                <p class="card__text">A fully responsive, accessible landing page. Clean layout, semantic HTML, and performance-optimized assets.</p>
+                                <a class="btn external-link" href="https://your-landing-page-link.com" target="_blank">View Landing Page
+                                    <svg class="card__icon external-link__icon" aria-label="External link" role="img">    
+                                        <title>External link</title>
+                                        <use xlink:href="img/sprite.svg#icon-external-link"></use>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="projects__item card">
-                            <h3 class="heading-3 card__tittle">React App</h3>
-                            <img class="card__img" src="img/kovtp.png" alt="Portrait picture with head tilted to the side of Tatjana Kadak" class="img no-download" oncontextmenu="return false;">
-                            <p class="card__text">A modern React app featuring reusable components and hooks. Focused on performance and responsive design.</p>
-                            <a href="#" class="project-link disabled" aria-disabled="true" onclick="return false;">React Project link coming soon
-                                <svg aria-label="External link" role="img" class="card__icon">
-                                    <title>External link</title>
-                                    <use xlink:href="img/sprite.svg#icon-external-link"></use>
-                                </svg>
-                            </a>
+                        <div class="projects__item">
+                            <div class="card__content card">
+                                <h3 class="heading-3 card__tittle">React App</h3>
+                                <img class="card__img" src="img/angular.jpg" alt="Placeholder for a React application demonstrating modern UI and component-based structure." class="img no-download" oncontextmenu="return false;" loading="lazy">
+                                <p class="card__text">A modern React app featuring reusable components and hooks. Focused on performance and responsive design.</p>
+                                <a href="#" class="project-link disabled external-link" aria-disabled="true" onclick="return false;">React Project link coming soon
+                                    <svg class="card__icon external-link__icon" aria-label="External link" role="img">
+                                        <title>External link</title>
+                                        <use xlink:href="img/sprite.svg#icon-external-link"></use>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -323,11 +320,11 @@
                     <div class="contact__list">
                         <div class="contact__item ">
                             <div class="contact__icon-container zoom-in">
-                                <svg class="contact__icon">
+                                <svg class="contact__icon" aria-hidden="true">
                                     <use xlink:href="img/sprite.svg#icon-skype"></use>
                                 </svg>
                             </div>
-                            <span class="contact__name" aria-hidden="true">Skype</span>
+                            <span class="contact__name" >Skype</span>
                             <p class="contact__skype">tanja.kadak@gmail.com</p>
                         </div>
                         <div class="contact__item">
@@ -337,7 +334,7 @@
                                 </svg>
                             </div>
                          
-                            <span class="contact__name">Contacte me by email</span>
+                            <span class="contact__name">Email</span>
                             <a class="contact__email" href=mailto:tanja.kadak@gmail.com?subject="Contacte me by email">tanja.kadak@gmail.com</a>
                         </div>
                         <div class="contact__item">

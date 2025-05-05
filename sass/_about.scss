@@ -1,7 +1,7 @@
 .about {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: space-between;
 
@@ -20,6 +20,7 @@
 		@include respond(tab-port) {
 			margin-right: 0;
 			margin-bottom: 2rem;
+			width: auto;
 		}
 	}
 
@@ -36,7 +37,7 @@
 	// .about__details
 
 	&__details {
-		width: 50%;
+		width: 60%;
 
 		@include respond(tab-port) {
 			width: 100%;

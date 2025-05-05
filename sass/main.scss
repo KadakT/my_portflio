@@ -1,4 +1,8 @@
-@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+// @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+$fa-font-path: "../webfonts"; // Relative to your compiled CSS output
+
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "mixins";
 @import "base";
 @import "typography";

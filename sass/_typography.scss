@@ -59,3 +59,20 @@
 .heading--color-primary{
     color: $color-primary;
 }
+
+.external-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem; 
+    text-decoration: none;
+    vertical-align: middle;
+    margin-top: auto;
+    align-self: center;
+   
+    &__icon{
+        width: 1em;
+        height: 1em;
+        fill: currentColor; 
+        flex-shrink: 0;
+    }
+}
