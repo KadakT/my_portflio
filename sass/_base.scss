@@ -37,8 +37,8 @@ $fs-xlarge: 3.5em;
 
 // font-sizes for heading 2
 $fs-large: 3em; 
-$fs-large-tablet: 2em; 
-$fs-large-phone: 1.25em; 
+$fs-large-tablet: 2.5em; 
+$fs-large-phone: 2em; 
 
 // font-sizes for heading 3
 $fs-600: 2.25em; 
@@ -104,16 +104,17 @@ body {
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 1.5%;
+    padding: 0 2%;
     width: 100%; 
+    @include respond(tab-land) {
+        padding: 0 1.5rem;
+    }
     @include respond(tab-port) {
+        padding: 0 1.25rem;
+    }
+    @include respond(phone) {
         padding: 0 .8rem;
     }
-}
-
-.section-home{
-    //background-color: #e3e0cf;
-    background-color: #fafafa;
 }
 
 .section-services{
@@ -128,13 +129,17 @@ body {
 }
 
 .section-home{
+    background-color: #e1dfd4;
     height: 85vh;
     min-height: 600px;
     -webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     display: flex;
-    @include respond(tab-port) {
+    @include respond(tab-land){
         height: auto;
+        min-height: auto;
+    }
+    @include respond(tab-port) {
         width: 100%;
         // -webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
         // clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -153,7 +158,6 @@ body {
 .btn {
     border: none;
     cursor: pointer;
-            // text-transform: uppercase;
     text-decoration: none;
     padding:  1rem 2rem;
     display: inline-block;
@@ -165,6 +169,9 @@ body {
     background-color: $color-primary-dark;
     color: $color-white;
     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    @include respond(phone){
+        padding:  .6rem 1.1rem;
+    }
     &:hover,
     &:focus {
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);

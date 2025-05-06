@@ -35,10 +35,15 @@
         max-height: 100%;
         display: flex;
         @include respond(tab-port) {
-            height: 200px;
+            height: 30vh;
+            min-height: 330px;
             overflow: hidden;
             object-fit: cover;
             align-self: center;
+        }
+        @include respond(phone){
+            height: 30vh;
+            min-height: auto;
         }
 
         .img {
