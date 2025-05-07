@@ -28,9 +28,8 @@ $img-shadow: 0 5px 20px 0 rgba(0, 0, 0 , 0.1), 0 6px 30px 0 rgba(0, 0, 0 , 0.1);
 $border-radius: 4px;
 
 // FONT VARIABLES
-//$font-logo: 'Pacifico', cursive;
 $font-primary: 'Inter', sans-serif;
-$font-display: 'Playfair Display', serif;
+$font-display: "Lora", serif;
 
 //FONT SIZE VARIABLES
 $fs-xlarge: 3.5em;
@@ -54,11 +53,6 @@ $fs-500-phone: 1.375em; //22px
 $fs-400: 1em; // 16px
 // $fs-400-tablet: 
 // $fs-400-phone:
-
-// font-sizes small
-$fs-300: .8em; // 12.8px
-// $fs-300-tablet:
-// $fs-300-phone:
 
 
 //RESPONSIVE BREAKPOINTS
@@ -120,7 +114,12 @@ body {
 .section-services{
     background-color: $color-beige-light;
     clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-   
+    @include respond(tab-port){
+        clip-path: polygon(0 0, 100% 10vh, 100% 100%, 0 100%);
+    }
+    @include respond (phone){
+        clip-path: polygon(0 0, 100% 7vh, 100% 100%, 0 100%);
+    }
 }
 
 .section-contact{
@@ -138,11 +137,14 @@ body {
     @include respond(tab-land){
         height: auto;
         min-height: auto;
+        clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     }
-    @include respond(tab-port) {
+    @include respond(tab-port){
         width: 100%;
-        // -webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-        // clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path:polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    }
+    @include respond (phone){
+        clip-path:polygon(0 0, 100% 0, 100% 93vh, 0 100%);
     }
 }
 
@@ -150,6 +152,12 @@ body {
     background-color: #c5d5cd;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vh), 0 100%);
     padding-top: 4rem;
+    @include respond(tab-port){
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vh), 0 100%);
+    }
+    @include respond (phone){
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vh), 0 100%);
+    }
 }
 
 //............ SHARED ELEMENTS...................

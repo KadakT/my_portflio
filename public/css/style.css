@@ -113,6 +113,16 @@ body {
   background-color: #f1ede4;
   clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
 }
+@media only screen and (max-width: 56.25em) {
+  .section-services {
+    clip-path: polygon(0 0, 100% 10vh, 100% 100%, 0 100%);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .section-services {
+    clip-path: polygon(0 0, 100% 7vh, 100% 100%, 0 100%);
+  }
+}
 
 .section-contact {
   background-color: #1b1b1b;
@@ -131,11 +141,18 @@ body {
   .section-home {
     height: auto;
     min-height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   }
 }
 @media only screen and (max-width: 56.25em) {
   .section-home {
     width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .section-home {
+    clip-path: polygon(0 0, 100% 0, 100% 93vh, 0 100%);
   }
 }
 
@@ -143,6 +160,16 @@ body {
   background-color: #c5d5cd;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vh), 0 100%);
   padding-top: 4rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .section-projects {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vh), 0 100%);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .section-projects {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vh), 0 100%);
+  }
 }
 
 .btn {
@@ -233,7 +260,7 @@ body {
 .heading-primary--sub,
 .heading-2,
 .heading-3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Lora", serif;
 }
 
 .heading-2 {
@@ -476,7 +503,7 @@ body {
 }
 .navigation__link:link, .navigation__link:visited {
   font-size: 1em;
-  font-family: "Playfair Display", serif;
+  font-family: "Lora", serif;
   font-weight: 500;
   color: #37343A;
   text-decoration: none;
@@ -836,7 +863,7 @@ body {
   background-color: #f9f7f6;
   border-radius: 4px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem 2.5rem 2rem;
   text-align: center;
   height: 100%;
   margin: 0 auto;
@@ -922,7 +949,9 @@ body {
 .contact .external-link {
   width: 1rem;
   height: 1rem;
-  margin-right: 4px;
+  margin-left: 4px;
+  margin-bottom: 3px;
+  fill: #FFFFFF;
 }
 .contact .linkedin-link {
   display: flex;
