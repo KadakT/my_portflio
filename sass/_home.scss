@@ -2,6 +2,10 @@
     display: flex;
     gap: 2rem;
     justify-content: space-between;
+    @include respond(tab-port) {
+        flex-direction: column-reverse;
+        padding-bottom: 3rem;
+    }
 
     // .home__content
     &__content {
@@ -13,7 +17,6 @@
         @include respond(tab-port) {
             width: 100%;
             justify-content: start;
-            padding-top: 3rem;
         }
 
         .heading-primary {
@@ -31,18 +34,38 @@
         max-width: 100%;
         max-height: 100%;
         display: flex;
+        @include respond(tab-port) {
+            height: 30vh;
+            min-height: 330px;
+            overflow: hidden;
+            object-fit: cover;
+            align-self: center;
+        }
+        @include respond(phone){
+            height: 30vh;
+            min-height: auto;
+        }
 
         .img {
-            width: 100%;
+            max-width: 100%;
             height: 665px;
             display: block;
             object-fit: cover;
             margin-top: auto;
+            @include respond(tab-land){
+                height: 50vw;
+            }
+            @include respond(tab-port) {
+                width: 100%;
+                height: 50vw;
+            }
         }
+        
+    }
 
-        @include respond(tab-port) {
-            display: none;
-        }
+    picture{
+        display: flex;
+        align-items: flex-end;
     }
 }
 
@@ -55,13 +78,5 @@
 
     &--sub {
         margin-bottom: 1.5rem;
-    }
-
-    &::after {
-        content: '';
-        width: 30%;
-        height: 4px;
-        background-color: $color-primary;
-        opacity: 60%;
     }
 }

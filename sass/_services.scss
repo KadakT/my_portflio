@@ -30,10 +30,19 @@
     padding: 1.5rem 2rem;
     background-color: $color-grey-light-1;
     border-radius: $border-radius;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
 
 		// .vertical-card__img
 		&__img {
             width: 30%;
+            @include respond(tab-port) {
+                  width: 75%;
+                  max-height: 200px;
+                  align-self: center;
+            }
+           
 		}
 
 		// .vertical-card__text

@@ -16,7 +16,6 @@ jQuery(document).ready(function() {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html, body').animate({
-                   // scrollTop: target.offset().top
                    scrollTop: target.offset().top - 100
                 }, 1000, function(){
                     if (windowWidth < 900) {
@@ -29,9 +28,6 @@ jQuery(document).ready(function() {
         }
     });
   });
-
-
-   // mobile menu click function
   
   $( window ).on( "resize scroll", function() {
     windowWidth = $( window ).width();
@@ -41,31 +37,9 @@ jQuery(document).ready(function() {
     }
 
     if($('.skills-bar__container').isInViewport()){
-      var lang = {
-        "html": "100%",
-        "css": "90%",
-        "typescript": "70%",
-        "angular": "80%",
-        "react": "30%",
-        "accessibility": "90%"
-      };
-      
-      var multiply = 4;
-      
-      $.each( lang, function( language, percent) {
-      
-        var delay = 700;
-        
-        setTimeout(function() {
-          $('#'+language+'-percent').html(percent);
-        },delay*multiply);
-        
-        multiply++;
-      
-      });
-    //   jQuery('.skills__container').each(function() {
-    //     jQuery(this).find('.skills__skill').animate({ width: jQuery(this).attr('data-percent') }, 3000);
-    // });
+      $(".skills-bar").showProgressBar();
+    } else {
+      $(".skills-bar").removeProgressBar();
     }
   });
 
@@ -95,7 +69,6 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-
 var lang = {
   "html": "90%",
   "css": "90%",
@@ -107,15 +80,27 @@ var lang = {
 
 var multiply = 4;
 
-$.each( lang, function( language, percent) {
+$.fn.showProgressBar = function() {
+  return this.each(function() {
+    $.each(lang, function(language, percent) {
+      var delay = 700;
+      setTimeout(function() {
+        $('#progress-' + language).addClass('animate');
+        $('#' + language + '-percent').html(percent);
+      }, delay * multiply);
+      multiply++;
+    });
+  });
+};
 
-  var delay = 700;
-  
-  setTimeout(function() {
-    $('#progress-'+language).addClass('animate');
-    $('#'+language+'-percent').html(percent);
-  },delay*multiply);
-  
-  multiply++;
+$.fn.removeProgressBar = function() {
+  return this.each(function() {
+    $.each(lang, function(language) {
+        $('#progress-' + language).removeClass('animate');
+      });
+   
+  });
+}
 
-});
+
+

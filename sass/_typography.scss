@@ -9,12 +9,20 @@
 .heading-primary{
     font-size: $fs-large;
     line-height: 1.25em;
+    @include respond(phone){
+        font-size: $fs-large-tablet;
+    }
 }
+
 .heading-primary--sub{
     font-size: 1.75rem;
     line-height: .8em;
     font-weight: 500;
+    @include respond(phone){
+        font-size: 1.4rem;
+    }
 }
+
 .heading{
     &__container{
         width: 100%;
@@ -38,6 +46,12 @@
     color: $color-grey-dark-2;
     text-transform: uppercase;
     position: relative;
+    @include respond(tab-port){
+        font-size: $fs-large-tablet;
+    }
+    @include respond(phone){
+        font-size: $fs-large-phone;
+    }
 }
 
 .heading-2::after{
@@ -54,8 +68,31 @@
     font-weight: 400;
     font-size: $fs-600;
     line-height: 2.25rem;
+    @include respond(tab-port){
+        font-size: $fs-600-tablet;
+    }
+    @include respond(phone){
+        font-size: $fs-large-phone;
+    }
 }
 
 .heading--color-primary{
     color: $color-primary;
+}
+
+.external-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem; 
+    text-decoration: none;
+    vertical-align: middle;
+    margin-top: auto;
+    align-self: center;
+   
+    &__icon{
+        width: 1em;
+        height: 1em;
+        fill: currentColor; 
+        flex-shrink: 0;
+    }
 }

@@ -1,3 +1,5 @@
+// @import "~@fortawesome/fontawesome-free/css/all.min.css";
+
 .timeline {
     position: relative;
     width: 100%;
@@ -21,7 +23,20 @@
         position: relative;
         background: inherit;
         width: 50%;
+    }
 
+    &__container:not(.timeline__title){
+        @include respond(tab-port){
+            width: 100%;
+            left: 0;
+            right: 0;
+            background-color: inherit;
+            background-color: $color-grey-light-1;
+            border-radius: $border-radius;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            margin-bottom: 1rem;
+            z-index: 100;
+        }
     }
 
     &__container--right {
@@ -43,6 +58,9 @@
         border: 5px solid $color-primary;
         border-radius: 16px;
         z-index: 1;
+        @include respond(tab-port){
+            content: none;
+        }
     }
 
     &__container.timeline__title::after {
@@ -60,7 +78,7 @@
     }
 
     &__container.timeline__title::before {
-        font-family: "Font Awesome 6 Free";
+        font-family: 'fontello';
         content: "\f0f2";
         font-weight: 900;
         display: inline-block;
@@ -72,7 +90,7 @@
         z-index: 2;
     }
     &__container.timeline__title.education::before{
-        content: "\f549";
+        content: "\f19d";
     }
 
     &__container--right::after {
@@ -83,8 +101,6 @@
         left: 8px;
     }
 
-    &__title {}
-
     &__sub-title {
         margin: 0 0 10px 0;
         font-size: 18px;
@@ -94,11 +110,14 @@
 
     &__content {
         padding: 2rem;
+        @include respond(tab-port){
+            padding: 0 !important;
+            text-align: center !important;
+        }
     }
 
     &__container--right .timeline__content {
-        padding: 2rens;
-        text-align: end;
+        padding: 2rem;
         text-align: left;
     }
 
@@ -108,50 +127,5 @@
 
     &__date{
         color: $color-primary;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .timeline::after {
-        left: 90px;
-    }
-
-    .container {
-        width: 100%;
-        padding-left: 120px;
-        padding-right: 30px;
-    }
-
-    .container.right {
-        left: 0%;
-    }
-
-    .container.left::after,
-    .container.right::after {
-        left: 82px;
-    }
-
-    .container.left::before,
-    .container.right::before {
-        left: 100px;
-        border-color: transparent #006E51 transparent transparent;
-    }
-
-    .container.left .date,
-    .container.right .date {
-        right: auto;
-        left: 15px;
-    }
-
-    .container.left .icon,
-    .container.right .icon {
-        right: auto;
-        left: 146px;
-    }
-
-    .container.left .content,
-    .container.right .content {
-        padding: 30px 30px 30px 90px;
-        border-radius: 500px 0 0 500px;
     }
 }

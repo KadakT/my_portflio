@@ -3,7 +3,7 @@
 $color-primary: #e91f4f;
 $color-primary-light:#fa4127;
 
-$color-primary-dark: #e91f4f;
+$color-primary-dark: #D11541;
 
 $color-secondary: #070707;
 $color-secondary-light-1: #3F3F3F;
@@ -28,9 +28,8 @@ $img-shadow: 0 5px 20px 0 rgba(0, 0, 0 , 0.1), 0 6px 30px 0 rgba(0, 0, 0 , 0.1);
 $border-radius: 4px;
 
 // FONT VARIABLES
-//$font-logo: 'Pacifico', cursive;
-$font-primary: "Work Sans", sans-serif;
-$font-display: "Work Sans", sans-serif;
+$font-primary: 'Inter', sans-serif;
+$font-display: "Lora", serif;
 
 //FONT SIZE VARIABLES
 $fs-xlarge: 3.5em;
@@ -54,11 +53,6 @@ $fs-500-phone: 1.375em; //22px
 $fs-400: 1em; // 16px
 // $fs-400-tablet: 
 // $fs-400-phone:
-
-// font-sizes small
-$fs-300: .8em; // 12.8px
-// $fs-300-tablet:
-// $fs-300-phone:
 
 
 //RESPONSIVE BREAKPOINTS
@@ -97,28 +91,35 @@ body {
     font-family: $font-primary;
     color: $color-font;
     font-weight: 300;
-    line-height: 1.37em;
+    line-height: 1.5em;
     // background-color: #9fa8a3;
 }
 
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 1.5%;
+    padding: 0 2%;
     width: 100%; 
+    @include respond(tab-land) {
+        padding: 0 1.5rem;
+    }
     @include respond(tab-port) {
+        padding: 0 1.25rem;
+    }
+    @include respond(phone) {
         padding: 0 .8rem;
     }
-}
-
-.section-home{
-    //background-color: #e3e0cf;
-    background-color: #fafafa;
 }
 
 .section-services{
     background-color: $color-beige-light;
     clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+    @include respond(tab-port){
+        clip-path: polygon(0 0, 100% 10vh, 100% 100%, 0 100%);
+    }
+    @include respond (phone){
+        clip-path: polygon(0 0, 100% 7vh, 100% 100%, 0 100%);
+    }
 }
 
 .section-contact{
@@ -127,26 +128,36 @@ body {
 }
 
 .section-home{
+    background-color: #e1dfd4;
     height: 85vh;
     min-height: 600px;
     -webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     display: flex;
-}
-
-@include respond(tab-port) {
-    .section-home{
+    @include respond(tab-land){
         height: auto;
+        min-height: auto;
+        clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    }
+    @include respond(tab-port){
         width: 100%;
-        -webkit-clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
-        clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
+        clip-path:polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    }
+    @include respond (phone){
+        clip-path:polygon(0 0, 100% 0, 100% 93vh, 0 100%);
     }
 }
 
 .section-projects{
     background-color: #c5d5cd;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vh), 0 100%);
-    padding-top: 9rem;
+    padding-top: 4rem;
+    @include respond(tab-port){
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vh), 0 100%);
+    }
+    @include respond (phone){
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vh), 0 100%);
+    }
 }
 
 //............ SHARED ELEMENTS...................
@@ -155,21 +166,24 @@ body {
 .btn {
     border: none;
     cursor: pointer;
-            // text-transform: uppercase;
-            text-decoration: none;
-            padding:  1rem 2rem;
-            display: inline-block;
-            border-radius: 10rem;
-            transition: all .2s;
-            position: relative;
-            font-size: $fs-400;
-            width: max-content;
-            background-color: $color-primary-dark;
-            color: $color-white;
-    &,
-    &:link,
-    &:visited {
-
+    text-decoration: none;
+    padding:  1rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: $fs-400;
+    width: max-content;
+    background-color: $color-primary-dark;
+    color: $color-white;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    @include respond(phone){
+        padding:  .6rem 1.1rem;
+    }
+    &:hover,
+    &:focus {
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+        transform: translateY(-2px);
     }
 }
 .btn--action {
@@ -186,5 +200,18 @@ body {
         width: 100%;
         background-color: $color-grey-light-2;
         height: 1px;
+    }
+}
+
+.primary--underline{
+    position: relative;
+    &::after{
+    content: "";
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    width: 4rem;
+    height: 2px;
+    background-color: #e91f4f;
     }
 }
