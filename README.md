@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website, built to showcase my work, experience, and services as a front-end web developer specializing in accessibility and Angular applications.
 
-🔗 **Live Site:** [Visit the live site](https://tk.ee)
+🔗 **Live Site:** [Visit the live site](https://tkweb.ee/)
 or
 🔗 **Live Site:** [kadakt.github.io/my_portfolio](https://kadakt.github.io/my_portfolio/)
 
