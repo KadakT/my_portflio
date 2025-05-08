@@ -4,13 +4,17 @@
   "description": "Tatjana Kadak portfolio",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch sass/main.scss:public/css/style.css",
+    "watch:sass": "sass --watch sass/main.scss public/css/style.css",
     "devserver": "nodemon server.js",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "sass sass/main.scss public/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" public/css/style.comp.css -o public/css/style.prefix.css",
     "compress:css": "sass public/css/style.prefix.css public/css/style.css --style=compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "sync:html": "copyfiles views/index.html docs/",
+    "sync:assets": "copyfiles -u 1 public/**/* docs/",
+    "sync:css": "copyfiles -u 1 public/css/** docs/css",
+    "sync:docs": "npm run build:css && npm run sync:html && npm run sync:css && npm run sync:assets"
   },
   "author": "Tatjana Kadak",
   "license": "ISC",
